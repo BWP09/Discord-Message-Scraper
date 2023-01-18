@@ -8,8 +8,8 @@ data = []
 last_message_id = 0
 
 
-channel_id = sys.argv[2]             # 939541822005448704
-number_messages = int(sys.argv[3])   # 8547
+channel_id = sys.argv[2]
+number_messages = int(sys.argv[3])
 number_loops = int(utils.round_up(number_messages, 50) / 50)
 
 
