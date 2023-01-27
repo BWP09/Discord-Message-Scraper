@@ -1,20 +1,19 @@
+# Good luck to whoever wants to read this...
+
 import sys, json 
 import utils
 
 
-token = utils.read_yml("C:/Users/BWP09/Desktop/Misc/Code/Python/Discord/Client/Client_Requests/config/token.yml")["token"]
+token = utils.read_yml("C:/Users/BWP09/Desktop/Code/Python/Discord/Client/Client_Scraper/config/token.yml")["token"]
 
 data = []
 last_message_id = 0
 
-
-channel_id = sys.argv[2]             # 939541822005448704
-number_messages = int(sys.argv[3])   # 8547
+channel_id = sys.argv[2]
+number_messages = int(sys.argv[3])
 number_loops = int(utils.round_up(number_messages, 50) / 50)
 
-
-print(f"\nScraping {number_messages} from {channel_id} in {number_loops} loops")
-
+print(f"\nScraping {number_messages} messages from {channel_id} in {number_loops} loops\n")
 
 messages = utils.retrieve_messages(token, channel_id)
 
@@ -66,7 +65,7 @@ while not stop:
     messages = utils.retrieve_messages_before(token, channel_id, last_message_id)
     
     
-    print(f"\nDone with loop {main_i} of {number_loops}")
+    print(f"Done with loop {main_i} of {number_loops}", end = "\r")
     
     main_i += 1
     
