@@ -1,4 +1,4 @@
-# Discord-Message-Scraper
+# Discord Message Scraper
 
 Allows you to scrape messages from a Discord channel!  
 Saves scraped messages to a JSON file, use `process.py` to further process the output file.
