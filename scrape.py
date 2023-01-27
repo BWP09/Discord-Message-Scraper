@@ -9,6 +9,7 @@ token = utils.read_yml("C:/Users/BWP09/Desktop/Code/Python/Discord/Client/Client
 data = []
 last_message_id = 0
 
+
 channel_id = sys.argv[2]
 number_messages = int(sys.argv[3])
 number_loops = int(utils.round_up(number_messages, 50) / 50)
